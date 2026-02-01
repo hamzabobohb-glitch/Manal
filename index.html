@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Valentine 💘</title>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background: pink;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.3rem;
+        margin-bottom: 20px;
+      }
+
+      img {
+        width: 250px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+      }
+
+      .buttons {
+        display: flex; /* place buttons in a row */
+        gap: 20px; /* space between YES and NO */
+      }
+
+      button {
+        padding: 14px 24px;
+        font-size: 18px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      #yes {
+        background: #ff4d6d;
+        color: white;
+      }
+
+      #no {
+        background: #555;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Manal, will you be my Valentine? 💖</h1>
+
+    <!-- Main image -->
+    <img src="Manal.png" alt="Cute image" />
+    <img src="Scared.gif" />
+
+    <!-- Buttons side by side -->
+    <div class="buttons">
+      <button id="yes" onclick="yesClicked()">YES 💕</button>
+      <button id="no">NO 😢</button>
+    </div>
+    <div style="position: absolute; bottom: 10px; font-size: 14px; color: #333">
+      Made by Hamza Bou
+    </div>
+
+    <script>
+      const noBtn = document.getElementById("no");
+      let scale = 1; // initial size
+
+      // Shrink NO on click
+      noBtn.addEventListener("click", () => {
+        scale -= 0.15; // shrink by 15% each click
+        if (scale <= 0.1) {
+          noBtn.style.display = "none"; // disappear when too small
+        } else {
+          noBtn.style.transform = `scale(${scale})`;
+        }
+      });
+
+      function yesClicked() {
+        document.body.innerHTML = `
+          <h1>I KNEW it , Waa L7waaa</h1>
+          <img src="butt.gif">
+        `;
+      }
+    </script>
+  </body>
+</html>

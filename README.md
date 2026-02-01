@@ -1,2 +1,2 @@
 # Manal
-MAnal
+Manal
